@@ -21,3 +21,30 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
+
+
+
+from bs4 import BeautifulSoup
+
+# Ouvrir le fichier HTML
+with open('C:\Users\kpadillagracia\OneDrive - Jems\03 - Power Automate\01 - Exlog\00 - Input\088TE QTIF-700.html', 'r') as f:
+    contenu_html = f.read()
+
+# Passer le contenu HTML à Beautiful Soup
+soup = BeautifulSoup(contenu_html, 'html.parser')
+
+# Rechercher tous les éléments qui contiennent la chaîne de caractères spécifiée
+elements = soup.find_all(string='MLS')
+
+# Parcourir tous les éléments trouvés et extraire les données nécessaires
+for element in elements:
+    # Extraire les données de l'élément en utilisant les méthodes de Beautiful Soup
+    donnees = element.parent.next_sibling.get_text()
+    print(donnees)
+
+# Fermer le fichier HTML
+f.close()
+
+# Display the table on the page.
+streamlit.dataframe(donnees)
+
