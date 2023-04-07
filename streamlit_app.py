@@ -27,14 +27,14 @@ streamlit.dataframe(fruits_to_show)
 from bs4 import BeautifulSoup
 
 # Ouvrir le fichier HTML
-with open("C:\Users\kpadillagracia\OneDrive - Jems\03 - Power Automate\01 - Exlog\00 - Input\088TE QTIF-700.html", 'r') as f:
+with open('http://www.kirschpm.fr/cours/M1Gestion/pages/coursHTML-1.html', 'r') as f:
     contenu_html = f.read()
 
 # Passer le contenu HTML à Beautiful Soup
 soup = BeautifulSoup(contenu_html, 'html.parser')
 
 # Rechercher tous les éléments qui contiennent la chaîne de caractères spécifiée
-elements = soup.find_all(string='MLS')
+elements = soup.find_all(string='Important')
 
 # Parcourir tous les éléments trouvés et extraire les données nécessaires
 for element in elements:
