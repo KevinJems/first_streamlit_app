@@ -27,7 +27,7 @@ streamlit.dataframe(fruits_to_show)
 from bs4 import BeautifulSoup
 
 # Ouvrir le fichier HTML
-with open('C:\Users\kpadillagracia\OneDrive - Jems\03 - Power Automate\01 - Exlog\00 - Input\088TE QTIF-700.html', 'r') as f:
+with open("C:\Users\kpadillagracia\OneDrive - Jems\03 - Power Automate\01 - Exlog\00 - Input\088TE QTIF-700.html", 'r') as f:
     contenu_html = f.read()
 
 # Passer le contenu HTML à Beautiful Soup
