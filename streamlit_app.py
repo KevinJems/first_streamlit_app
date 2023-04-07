@@ -1,4 +1,5 @@
 import streamlit
+import BeautifulSoup
 
 streamlit.title ('My Mom\'s New Healthy Diner')
 
